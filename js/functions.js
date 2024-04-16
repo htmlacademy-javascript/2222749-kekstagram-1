@@ -34,3 +34,16 @@ function checkStringLength (string, maxLength) {
     return false;
   }
 }
+
+//работа над ошибками
+
+const extractNumber = (string) => {
+  let result = '';
+  for (let i = 0; i <= string.length; i++) {
+    if (!Number.isNaN(parseInt(string.at(i), 10))){
+      result += string.at(i);
+    }
+
+  }
+  return parseInt(result, 10);
+}
