@@ -1,4 +1,5 @@
 import getRandomNumber from './getRandomNumber.js';
+
 import generateComment from './generateComment.js';
 
 const generatePhotoArray = () => {
@@ -17,6 +18,7 @@ const generatePhotoArray = () => {
     let url;
     do {
       url = `photos/${getRandomNumber(1, 25)}.jpg`;
+
     } while (usedUrls.has(url));
     usedUrls.add(url);
 
@@ -37,6 +39,6 @@ const generatePhotoArray = () => {
   }
 
   return photoArray;
-}
+};
 
-export default generatePhotoArray;
+export {generatePhotoArray};

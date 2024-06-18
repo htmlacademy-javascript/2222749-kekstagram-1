@@ -1,6 +1,5 @@
 
-import generatePhotoArray from './generatePhotoArray.js';
+import { generatePhotoArray } from './generatePhotoArray.js';
+import { renderThumbnails } from './thumbnail.js';
 
-// Создание массива из 25 объектов фотографий
-const photos = generatePhotoArray();
-console.log(photos);
+renderThumbnails(generatePhotoArray());
